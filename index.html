@@ -4,112 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-white-500 text-black font-sans">
+  <body>
     <h1>
       <p>BMI Calculator</p>
     </h1>
     <div class="main-banner">
-      <p>
-        Benifits of a healthy BMI Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Eveniet ratione fugiat at distinctio dolores a dolorem
-        quae suscipit, tenetur culpa!
+      <img
+        class="image"
+        src="assets/Icons8-removebg-preview.png"
+        alt="a person meditating "
+      />
+      <p class="banner-text">
+        Maintaining a good BMI (Body Mass Index) is crucial for overall health
+        and well-being. A healthy BMI indicates that you are within an optimal
+        weight range, reducing the risk of chronic diseases such as heart
+        disease, diabetes, and hypertension. It also improves energy levels,
+        physical fitness, and mental health, contributing to a better quality of
+        life. By keeping your BMI in check through balanced nutrition and
+        regular exercise, you can enhance your longevity and enjoy a healthier,
+        more active lifestyle.
       </p>
-      <a href="#trigger-script" class="text-blue-500 underline">
+      <a href="#trigger-script" class="banner-link">
         <p>Tap to read more</p>
       </a>
     </div>
-    <div class="calculator container bg-black mx-auto p-4">
-      <form action="">
-        <div class="gender-type">
-          <button
-            class="gender-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            Male
-          </button>
-          <button
-            class="gender-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            Female
-          </button>
-        </div>
-        <label
-          for="input-age"
-          class="block mb-2 text-sm font-medium text-white dark:text-white"
-        >
-          Age</label
-        >
-        <input
-          type="number"
-          name="input-age"
-          id=""
-          class="input-age border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="0 - 100"
-          required
-        />
-        <label
-          for="input-weight"
-          class="block mb-2 text-sm font-medium text-white dark:text-white"
-          >Weight</label
-        >
-        <input
-          type="number"
-          name="input-weight"
-          id=""
-          class="input-weight border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="min: 0"
-          required
-        />
-        <button
-          class="weight-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Kg
-        </button>
-        <button
-          class="weight-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Pound
-        </button>
-        <label
-          for="input-height"
-          class="block mb-2 text-sm font-medium text-white dark:text-white"
-          >Height</label
-        >
-        <input
-          type="number"
-          name="input-height"
-          id=""
-          class="input-height border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="0 - 10ft"
-        />
-        <button
-          class="weight-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Feet
-        </button>
-        <button
-          class="weight-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Meters
-        </button>
-        <button
-          class="calculate-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Calculate
-        </button>
-      </form>
+
+    <div class="gender-type">
+      <button class="gender-btn">Male</button>
+      <button class="gender-btn">Female</button>
     </div>
-    <div class="benefit-banner hidden bg-gray-200 p-4 mt-4">
+
+    <div class="calculator">
+      <div class="age">
+        <label for="age-input">Age</label>
+        <input type="number" name="age-input" id="">
+      </div>
+      <div class="weight">
+        <label for="we'-input">Weight</label>
+        <input type="number" name="weight-input" id="">
+        <button>Kg</button>
+        <button>Pound</button>
+      </div>
+      <div class="height">
+        <label for="height-input">Height</label>
+        <input type="number" name="height-input" id="">
+        <button>Kg</button>
+        <button>Pound</button>
+      </div>
+
+      <button>Calculate</button>
+    </div>
+    <div class="benefit-banner ">
+      <span class="close-edit">&times;</span>
       <p>This will show when the main banner is clicked</p>
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
-    <div class="bmi-result hidden bg-gray-200">
-        <p>Youre BMI is : </p>
+    <div class="bmi-result">
+      <p>Youre BMI is :</p>
     </div>
     <script>
       // will show the benefit banner when the main banner is clicked
@@ -148,6 +102,12 @@
             alert("Invalid input");
           }
         }
+
+        // for the benefit banners close button
+        $('.close-edit').click(function(){
+          // hides the benefit banner 
+          $(".benefit-banner").css("display", "none");
+        })
       });
     </script>
   </body>

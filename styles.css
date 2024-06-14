@@ -1,3 +1,76 @@
+
+
+body{
+     background-color: black;
+     color: white;
+}
+.main-banner{
+     position: absolute;
+     top: 2px;
+     left: 45px;
+     height: 35%;
+     width: 90%;
+     margin: 3px;
+     padding: 2px;
+     background-color: #A333FF;
+     overflow: hidden;
+}
+
+.main-banner > .image{
+     position: relative;
+     left: 73%;
+     height: 91%;
+     margin: 10px;
+     object-fit: cover;
+}
+
+.main-banner > .banner-text{
+     position: relative;
+     left: 10px;
+     bottom: 98%;
+     width: 60%;
+     padding: 2px;
+     font-size: 18px;
+     color: white;
+}
+
+.main-banner > .banner-link{
+     position: relative;
+     left: 40%;
+     bottom: 100%;
+     background-color: yellow;
+}
+
+.gender-type{
+     position: absolute;
+     left: 4%;
+     bottom: 33%;
+     height: 10%;
+     margin: 2px;
+}
+h1{
+     position: absolute;
+     left: 4%;
+     bottom: 41%;
+     color: white;
+}
+
+.calculator{
+     position:absolute;
+     left: 4%;
+     height: 50%;
+     width: 91%;
+     top: 70%;
+}
+
 .benefit-banner{
      display: none;
+     position: absolute;
+     background-color: red;
+}
+
+.bmi-result{
+     display: none;
+     position: absolute;
+     background-color: red;
 }
