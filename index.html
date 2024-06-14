@@ -42,19 +42,19 @@
         <input type="number" name="age-input" id="">
       </div>
       <div class="weight">
-        <label for="we'-input">Weight</label>
+        <label for="weight-input">Weight</label>
         <input type="number" name="weight-input" id="">
-        <button>Kg</button>
-        <button>Pound</button>
+        <button class="weight-btn" id="kg">Kg</button>
+        <button class="weight-btn" id="pd">Pound</button>
       </div>
       <div class="height">
         <label for="height-input">Height</label>
         <input type="number" name="height-input" id="">
-        <button>Kg</button>
-        <button>Pound</button>
+        <button id="ft">Feet</button>
+        <button id="cm">Centimeters</button>
       </div>
 
-      <button>Calculate</button>
+      <button class="cal-btn">Calculate</button>
     </div>
     <div class="benefit-banner ">
       <span class="close-edit">&times;</span>
@@ -107,6 +107,36 @@
         $('.close-edit').click(function(){
           // hides the benefit banner 
           $(".benefit-banner").css("display", "none");
+        })
+
+        // for the weight buttons will apperance when clicked
+        $('#kg').click(function(){
+          $('#kg').css({
+            "background-color":"#A333FF",
+            "color":"white"
+          });
+        })
+
+        $('#pd').click(function(){
+          $('#pd').css({
+            "background-color":"#A333FF",
+            "color":"white"
+          });
+        })
+
+        // for the height buttons
+        $('#ft').click(function(){
+          $('#ft').css({
+            "background-color":"#A333FF",
+            "color":"white"
+          });
+        })
+
+        $('#cm').click(function(){
+          $('#cm').css({
+            "background-color":"#A333FF",
+            "color":"white"
+          });
         })
       });
     </script>
