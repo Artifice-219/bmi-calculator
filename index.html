@@ -32,6 +32,7 @@
     </div>
 
     <div class="gender-type">
+      <span><p class="text">Select gender</p></span>
       <button class="gender-btn">Male</button>
       <button class="gender-btn">Female</button>
     </div>
@@ -39,105 +40,235 @@
     <div class="calculator">
       <div class="age">
         <label for="age-input">Age</label>
-        <input type="number" name="age-input" id="">
+        <input type="number" name="age-input" id="" placeholder="0-100"/>
       </div>
       <div class="weight">
         <label for="weight-input">Weight</label>
-        <input type="number" name="weight-input" id="">
+        <input type="number" name="weight-input" id="" placeholder="min: 0" />
         <button class="weight-btn" id="kg">Kg</button>
         <button class="weight-btn" id="pd">Pound</button>
       </div>
       <div class="height">
         <label for="height-input">Height</label>
-        <input type="number" name="height-input" id="">
+        <input type="number" name="height-input" id="" placeholder="min:0"/>
         <button id="ft">Feet</button>
         <button id="cm">Centimeters</button>
       </div>
 
       <button class="cal-btn">Calculate</button>
     </div>
-    <div class="benefit-banner ">
+    <div class="benefit-banner">
       <span class="close-edit">&times;</span>
-      <p>This will show when the main banner is clicked</p>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <ul class="benefit-list">
+        <li>Reduced Risk of Chronic Diseases: Maintaining a healthy BMI lowers the risk of chronic conditions such as heart disease, type 2 diabetes, hypertension, and certain cancers.
+        </li>
+        <li>Improved Cardiovascular Health: A healthy BMI supports better heart function and reduces the likelihood of cardiovascular problems like stroke and coronary artery disease.</li>
+        <li>Enhanced Respiratory Function: Proper weight management can improve lung capacity and respiratory efficiency.</li>
+        <li>Better Mental Health: Balanced weight contributes to improved mood, reduced stress levels, and better mental clarity.</li>
+        <li>Increased Energy Levels: Maintaining a healthy BMI supports higher energy levels for daily activities and exercise.</li>
+        <li>Improved Sleep Quality: Healthy weight management often leads to better sleep patterns and overall sleep quality.</li>
+      </ul>
     </div>
 
     <div class="bmi-result">
-      <p>Youre BMI is :</p>
+      <p class="bmi_num">Youre BMI is :</p>
+      <p class="bmi_str"></p>
     </div>
     <script>
       // will show the benefit banner when the main banner is clicked
       $(document).ready(function () {
+        // variable to store height and weight values and thier repective units
+        let height;
+        let height_unit;
+        let weight;
+        let weight_unit;
+
         $('a[href="#trigger-script"]').click(function () {
           $(".benefit-banner").css("display", "block");
+          // blurs the main banner
+          $(".main-banner").css("filter", "blur(5px)");
+          $(".calculator").css("filter", "blur(5px)");
+
+          
         });
 
-        $(".input-age").on("input", function () {
+        // make sure no non-zero value on the input
+        $('.age input[type="number"]').on("input", function () {
           let value = $(this).val();
-
           validate(value);
         });
 
-        $(".input-weight").on("input", function () {
+        $('.weight input[type="number"]').on("input", function () {
           let value = $(this).val();
 
-          if (value < 0) {
-            alert("Invalid value");
-          }
+          // check if the provided number is within valid range
+          weight = $(this).val();
         });
 
-        $(".input-height").on("input", function () {
+        $('.height input[type="number"]').on("input", function () {
           let value = $(this).val();
 
-          if (value < 0) {
-            alert("Invalid value");
-          }
+          height = $(this).val();
         });
+        // convert all weight units to kilograms
+        function convert_weight(unit, weight_value) {
+          if (unit === "kg") {
+            return weight_value;
+          } else if (unit === "lb") {
+            return weight_value * 0.453592;
+          }
+        }
+        // convert all height to meters first
+
+        function convert_height(unit, height_value) {
+          if (unit === "ft") {
+            return height_value * 0.3048;
+          } else if (unit === "cm") {
+            return height_value * 0.01;
+          }
+        }
 
         function validate(input) {
           if (input < 0) {
             alert("Invalid value");
+            return false;
           }
           if (input > 99) {
             alert("Invalid input");
+            return false;
           }
         }
 
         // for the benefit banners close button
-        $('.close-edit').click(function(){
-          // hides the benefit banner 
+        $(".close-edit").click(function () {
+          // hides the benefit banner
           $(".benefit-banner").css("display", "none");
-        })
+          $(".main-banner").css("filter", "blur(0px)");
+          $(".calculator").css("filter", "blur(0px)");
+        });
 
         // for the weight buttons will apperance when clicked
-        $('#kg').click(function(){
-          $('#kg').css({
-            "background-color":"#A333FF",
-            "color":"white"
-          });
-        })
+        $("#kg").click(function () {
+          // assign a weight unit
+          weight_unit = "kg";
 
-        $('#pd').click(function(){
-          $('#pd').css({
-            "background-color":"#A333FF",
-            "color":"white"
+          $("#kg").css({
+            "background-color": "#A333FF",
+            color: "white",
           });
-        })
+          // remove styling of the pd button if the kg button is active
+          $("#pd").css({
+            "background-color": "white",
+            color: "black",
+          });
+        });
+
+        $("#pd").click(function () {
+          // assign a weight unit
+          weight_unit = "lb";
+
+          $("#pd").css({
+            "background-color": "#A333FF",
+            color: "white",
+          });
+
+          // remove the styling of the kg button if the pd button is active
+          $("#kg").css({
+            "background-color": "white",
+            color: "black",
+          });
+        });
 
         // for the height buttons
-        $('#ft').click(function(){
-          $('#ft').css({
-            "background-color":"#A333FF",
-            "color":"white"
-          });
-        })
+        $("#ft").click(function () {
+          // assign a height unit
+          height_unit = "ft";
 
-        $('#cm').click(function(){
-          $('#cm').css({
-            "background-color":"#A333FF",
-            "color":"white"
+          $("#ft").css({
+            "background-color": "#A333FF",
+            color: "white",
           });
-        })
+
+          // remove the cm button styling when the ft button is active
+          $("#cm").css({
+            "background-color": "white",
+            color: "black",
+          });
+        });
+
+        $("#cm").click(function () {
+          height_unit = "cm";
+
+          $("#cm").css({
+            "background-color": "#A333FF",
+            color: "white",
+          });
+
+          // remove the ft button styling when the cm button is active
+          $("#ft").css({
+            "background-color": "white",
+            color: "black",
+          });
+        });
+
+        $(".cal-btn").click(function () {
+          let converted_weight = convert_weight(weight_unit, weight);
+          let converted_height = convert_height(height_unit, height);
+
+          converted_height = validate_height(height_unit, height);
+
+          let bmi = converted_weight / (converted_height * converted_height);
+          let bmi_result_str = interpret_result(bmi);
+
+          $('.bmi-result').css('display','block');
+
+          // appendign that result to the output div
+       let output_div = $('.bmi-result');
+       let p_num = output_div.find('.bmi_num');
+       let p_str = output_div.find('.bmi_str');
+       p_str.append(bmi_result_str);
+       p_num.append(bmi);
+          
+
+        });
+        // validate height
+        function validate_height(unit, value) {
+          // if given value is zero floor to zero and return
+          if (value === 0) {
+            return 0;
+          }
+          switch (unit) {
+            case "ft":
+              if (value > 9) {
+                // if given ft value is greater than set to max value : 9
+                value = 9;
+              }
+              break;
+            case "cm":
+              if (value > 275) {
+                // if given cm value is greater then 275 ( 9 in feet) then set to max : 275
+                value = 275;
+              }
+          }
+
+          return value;
+        }
+
+        function interpret_result(bmi) {
+          // Interpret BMI category
+          let bmiCategory;
+          if (bmi < 18.5) {
+            bmiCategory = "Underweight";
+          } else if (bmi >= 18.5 && bmi < 25) {
+            bmiCategory = "Normal weight";
+          } else if (bmi >= 25 && bmi < 30) {
+            bmiCategory = "Overweight";
+          } else {
+            bmiCategory = "Obese";
+          }
+
+          return bmiCategory;
+                }
       });
     </script>
   </body>

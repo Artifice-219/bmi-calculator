@@ -1,22 +1,49 @@
 body {
-  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
+  background-color: black;
 }
 
 h1 {
   position: absolute;
-  left: 4%;
+  left: 37%;
   bottom: 41%;
   color: white;
 }
 
 .gender-type {
   position: absolute;
-  left: 40%;
-  bottom: 33%;
+  left: 25%;
+  bottom: 40%;
   height: 10%;
   margin: 2px;
-  
+}
+
+.gender-type > button:nth-of-type(1) {
+  position: absolute;
+  margin-left: 4px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
+}
+
+.gender-type > button:nth-of-type(2) {
+  position: absolute;
+  margin-left: 10px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  left: 70%;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
 }
 
 .main-banner {
@@ -27,15 +54,18 @@ h1 {
   width: 90%;
   margin: 3px;
   padding: 2px;
+  border-radius: 8px;
   background-color: #a333ff;
   overflow: hidden;
 }
 
 .main-banner > .image {
   position: relative;
+  top: 14%;
   left: 73%;
-  height: 91%;
+  height: 90%;
   margin: 10px;
+  transform: scale(1.7);
   object-fit: cover;
 }
 
@@ -53,7 +83,8 @@ h1 {
   position: relative;
   left: 40%;
   bottom: 100%;
-  background-color: yellow;
+  color: burlywood;
+  text-decoration: none;
 }
 
 .calculator {
@@ -64,336 +95,381 @@ h1 {
   top: 65%;
 }
 
-.calculator > .age{
-     margin: 4px;
-     /* background-color: orange; */
+.calculator > .age {
+  margin: 4px;
+  /* background-color: orange; */
 }
 
-.age >  input[type="number"]{
-     margin-left: 50px;
+.age > input[type="number"] {
+  color: white;
+  margin-left: 50px;
 }
 
-
-.weight > input[type="number"]{
-     margin-left: 26px;
+.weight > input[type="number"] {
+  color: white;
+  margin-left: 26px;
 }
 
 .weight > button:nth-of-type(1) {
-     /* CSS styles for the first button (Kg) */
-     margin-left: 100px;
-     padding-top: 2px;
-     padding-left: 12px;
-     padding-right: 12px;
-     padding-bottom: 2px;
-     border-radius: 100px;
-     font-size: 16px;
-     color: #0D0630;
-     background-color: #F6F7EB;
-   }
+  /* CSS styles for the first button (Kg) */
+  margin-left: 100px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
+}
 
-   .weight > button:nth-of-type(2) {
-     /* CSS styles for the first button (Kg) */
-     margin-left: 2px;
-     padding-top: 2px;
-     padding-left: 12px;
-     padding-right: 12px;
-     padding-bottom: 2px;
-     border-radius: 100px;
-     font-size: 16px;
-     color: #0D0630;
-     background-color: #F6F7EB;
-   }
-   
-.height > input[type="number"]{
-     margin-left: 29px;
+.weight > button:nth-of-type(2) {
+  /* CSS styles for the first button (Kg) */
+  margin-left: 2px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
+}
+
+.height > input[type="number"] {
+  color: white;
+  margin-left: 29px;
 }
 
 .height > button:nth-of-type(1) {
-     /* CSS styles for the first button (Kg) */
-     margin-left: 100px;
-     padding-top: 2px;
-     padding-left: 12px;
-     padding-right: 12px;
-     padding-bottom: 2px;
-     border-radius: 100px;
-     font-size: 16px;
-     color: #0D0630;
-     background-color: #F6F7EB;
-   }
+  /* CSS styles for the first button (Kg) */
+  margin-left: 100px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
+}
 
-   .height > button:nth-of-type(2) {
-     /* CSS styles for the first button (Kg) */
-     margin-left: 2px;
-     padding-top: 2px;
-     padding-left: 12px;
-     padding-right: 12px;
-     padding-bottom: 2px;
-     border-radius: 100px;
-     font-size: 16px;
-     color: #0D0630;
-     background-color: #F6F7EB;
-   }
-
+.height > button:nth-of-type(2) {
+  /* CSS styles for the first button (Kg) */
+  margin-left: 2px;
+  padding-top: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #0d0630;
+  background-color: #f6f7eb;
+}
 
 label[for="age-input"] {
-     font-size: 1.25rem; /* Adjust font size as needed */
-     font-weight: bold;  /* Adjust font weight as needed */
-     color: white;        /* Adjust color as needed */
-     /* Add more styles if necessary */
-   }
+  font-size: 1.25rem; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  color: white; /* Adjust color as needed */
+  /* Add more styles if necessary */
+}
 
-   label[for="weight-input"] {
-     font-size: 1.25rem; /* Adjust font size as needed */
-     font-weight: bold;  /* Adjust font weight as needed */
-     color: white;        /* Adjust color as needed */
-     /* Add more styles if necessary */
-   }
+label[for="weight-input"] {
+  font-size: 1.25rem; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  color: white; /* Adjust color as needed */
+  /* Add more styles if necessary */
+}
 
-   label[for="height-input"] {
-     font-size: 1.25rem; /* Adjust font size as needed */
-     font-weight: bold;  /* Adjust font weight as needed */
-     color: white;        /* Adjust color as needed */
-     /* Add more styles if necessary */
-   }
+label[for="height-input"] {
+  font-size: 1.25rem; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  color: white; /* Adjust color as needed */
+  /* Add more styles if necessary */
+}
 
-   input[type="number"] {
-     width: 100px;
-     padding: 0.5rem; /* Adjust padding as needed */
-     font-size: 1rem; /* Adjust font size as needed */
-     border: 1px solid #ccc; /* Example border style */
-     border-radius: 6px; /* Example border radius */
-     /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); Example box shadow */
-     background-color: transparent;
-   }
+input[type="number"] {
+  width: 100px;
+  padding: 0.5rem; /* Adjust padding as needed */
+  font-size: 1rem; /* Adjust font size as needed */
+  border: 1px solid #ccc; /* Example border style */
+  border-radius: 6px; /* Example border radius */
+  /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); Example box shadow */
+  background-color: transparent;
+}
 
-   .cal-btn{
-     position: relative;
-     top: 30px;
-     height: 40px;
-     width: 200px;
-     left: 170px;
-     padding-top: 2px;
-     padding-bottom: 2px;
-     border-radius: 6px;
-     border: none;
-     box-sizing: border-box;
-     font-size: 16px;
-     color: white;
-     background-color: #EB5D47;
-
-     
-   }
+.cal-btn {
+  position: relative;
+  top: 30px;
+  height: 40px;
+  width: 200px;
+  left: 170px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 6px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+  background-color: #eb5d47;
+}
 .benefit-banner {
   display: none;
   position: absolute;
-  background-color: red;
+  left: 10%;
+  width: 80%;
+  height: fit-content;
+  padding: 2%;
+  cursor: pointer;
+  background-color: #a333ff;
+}
+
+.benefit-banner > .benefit-list{
+  list-style-type:circle;
+  padding: 0;
+}
+
+.benefit-list li{
+  margin-bottom: 3%;
 }
 
 .bmi-result {
   display: none;
   position: absolute;
-  background-color: red;
+  top: 2%;
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 2%;
+  color: black;
+  background-color: white;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: black;
+    color: white;
+  }
 
-@media only screen and (max-width: 600px) {
+  h1 {
+    position: absolute;
+    left: 4%;
+    bottom: 41%;
+    color: white;
+  }
 
-     body {
-          background-color: black;
-          color: white;
-        }
-        
-        h1 {
-          position: absolute;
-          left: 4%;
-          bottom: 41%;
-          color: white;
-        }
-        
-        .gender-type {
-          position: absolute;
-          left: 40%;
-          bottom: 33%;
-          height: 10%;
-          margin: 2px;
-          
-        }
-        
-        .main-banner {
-          position: absolute;
-          top: 2px;
-          left: 20px;
-          height: 35%;
-          width: 90%;
-          margin: 3px;
-          padding: 2px;
-          background-color: #a333ff;
-          overflow: hidden;
-        }
-        
-        .main-banner > .image {
-          position: relative;
-          left: 54%;
-          height: 91%;
-          margin: 10px;
-          object-fit: cover;
-        }
-        
-        .main-banner > .banner-text {
-          position: relative;
-          left: 10px;
-          bottom: 108%;
-          width: 60%;
-          padding: 2px;
-          font-size: 12px;
-          color: white;
-        }
-        
-        .main-banner > .banner-link {
-          position: relative;
-          left: 28%;
-          bottom: 115%;
-          background-color: yellow;
-        }
-        
-        .calculator {
-          position: absolute;
-          left: 10%;
-          height: 40%;
-          width: 80%;
-          top: 65%;
-        }
-        
-        .calculator > .age{
-             margin: 4px;
-             /* background-color: orange; */
-        }
-        
-        .age >  input[type="number"]{
-             margin-left: 50px;
-        }
-        
-        
-        .weight > input[type="number"]{
-             margin-left: 26px;
-        }
-        
-        .weight > button:nth-of-type(1) {
-             /* CSS styles for the first button (Kg) */
-             margin-left: 25px;
-             padding-top: 2px;
-             padding-left: 12px;
-             padding-right: 12px;
-             padding-bottom: 2px;
-             border-radius: 100px;
-             font-size: 16px;
-             color: #0D0630;
-             background-color: #F6F7EB;
-           }
-        
-           .weight > button:nth-of-type(2) {
-             /* CSS styles for the first button (Kg) */
-             margin-left: 2px;
-             padding-top: 2px;
-             padding-left: 12px;
-             padding-right: 12px;
-             padding-bottom: 2px;
-             border-radius: 100px;
-             font-size: 16px;
-             color: #0D0630;
-             background-color: #F6F7EB;
-           }
-           
-        .height > input[type="number"]{
-             margin-left: 29px;
-        }
-        
-        .height > button:nth-of-type(1) {
-             /* CSS styles for the first button (Kg) */
-             margin-left: 25px;
-             padding-top: 2px;
-             padding-left: 12px;
-             padding-right: 12px;
-             padding-bottom: 2px;
-             border-radius: 100px;
-             font-size: 16px;
-             color: #0D0630;
-             background-color: #F6F7EB;
-           }
-        
-           .height > button:nth-of-type(2) {
-             /* CSS styles for the first button (Kg) */
-             position: absolute;
-             top: 86px;
-             margin-left: 2px;
-             padding-top: 2px;
-             padding-left: 26px;
-             padding-right: 12px;
-             padding-bottom: 2px;
-             border-radius: 100px;
-             font-size: 16px;
-             color: #0D0630;
-             background-color: #F6F7EB;
-           }
-        
-        
-        label[for="age-input"] {
-             font-size: 1.25rem; /* Adjust font size as needed */
-             font-weight: bold;  /* Adjust font weight as needed */
-             color: white;        /* Adjust color as needed */
-             /* Add more styles if necessary */
-           }
-        
-           label[for="weight-input"] {
-             font-size: 1.25rem; /* Adjust font size as needed */
-             font-weight: bold;  /* Adjust font weight as needed */
-             color: white;        /* Adjust color as needed */
-             /* Add more styles if necessary */
-           }
-        
-           label[for="height-input"] {
-             font-size: 1.25rem; /* Adjust font size as needed */
-             font-weight: bold;  /* Adjust font weight as needed */
-             color: white;        /* Adjust color as needed */
-             /* Add more styles if necessary */
-           }
-        
-           input[type="number"] {
-             width: 60px;
-             padding: 0.5rem; /* Adjust padding as needed */
-             font-size: 1rem; /* Adjust font size as needed */
-             border: 1px solid #ccc; /* Example border style */
-             border-radius: 6px; /* Example border radius */
-             /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); Example box shadow */
-             background-color: transparent;
-           }
-        
-           .cal-btn{
-             position: relative;
-             top: 30px;
-             height: 40px;
-             width: 200px;
-             left: 100px;
-             padding-top: 2px;
-             padding-bottom: 2px;
-             border-radius: 6px;
-             border: none;
-             box-sizing: border-box;
-             font-size: 16px;
-             color: white;
-             background-color: #EB5D47;
-        
-             
-           }
-        .benefit-banner {
-          display: none;
-          position: absolute;
-          background-color: red;
-        }
-        
-        .bmi-result {
-          display: none;
-          position: absolute;
-          background-color: red;
-        }
+  .gender-type {
+    position: absolute;
+    left: 40%;
+    bottom: 33%;
+    height: 10%;
+    margin: 2px;
+  }
+
+  .main-banner {
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    height: 35%;
+    width: 90%;
+    margin: 3px;
+    padding: 2px;
+    background-color: #a333ff;
+    overflow: hidden;
+  }
+
+  .main-banner > .image {
+    position: relative;
+    left: 54%;
+    height: 91%;
+    margin: 10px;
+    object-fit: cover;
+  }
+
+  .main-banner > .banner-text {
+    position: relative;
+    left: 10px;
+    bottom: 108%;
+    width: 60%;
+    padding: 2px;
+    font-size: 12px;
+    color: white;
+  }
+
+  .main-banner > .banner-link {
+    position: relative;
+    left: 28%;
+    bottom: 115%;
+    text-decoration: none;
+  }
+
+  .calculator {
+    position: absolute;
+    left: 10%;
+    height: 40%;
+    width: 80%;
+    top: 65%;
+  }
+
+  .calculator > .age {
+    margin: 4px;
+    /* background-color: orange; */
+  }
+
+  .age > input[type="number"] {
+    color: white;
+    margin-left: 50px;
+  }
+
+  .weight > input[type="number"] {
+    color: white;
+    margin-left: 26px;
+  }
+
+  .weight > button:nth-of-type(1) {
+    /* CSS styles for the first button (Kg) */
+    margin-left: 25px;
+    padding-top: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #0d0630;
+    background-color: #f6f7eb;
+  }
+
+  .weight > button:nth-of-type(2) {
+    /* CSS styles for the first button (Kg) */
+    margin-left: 2px;
+    padding-top: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #0d0630;
+    background-color: #f6f7eb;
+  }
+
+  .height > input[type="number"] {
+    color: whitesmoke;
+    margin-left: 29px;
+  }
+
+  .height > button:nth-of-type(1) {
+    /* CSS styles for the first button (Kg) */
+    margin-left: 25px;
+    padding-top: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #0d0630;
+    background-color: #f6f7eb;
+  }
+
+  .height > button:nth-of-type(2) {
+    /* CSS styles for the first button (Kg) */
+    position: absolute;
+    top: 86px;
+    margin-left: 2px;
+    padding-top: 2px;
+    padding-left: 26px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #0d0630;
+    background-color: #f6f7eb;
+  }
+
+  label[for="age-input"] {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: white; /* Adjust color as needed */
+    /* Add more styles if necessary */
+  }
+
+  label[for="weight-input"] {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: white; /* Adjust color as needed */
+    /* Add more styles if necessary */
+  }
+
+  label[for="height-input"] {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: white; /* Adjust color as needed */
+    /* Add more styles if necessary */
+  }
+
+  input[type="number"] {
+    width: 60px;
+    padding: 0.5rem; /* Adjust padding as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Example border style */
+    border-radius: 6px; /* Example border radius */
+    /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); Example box shadow */
+    background-color: transparent;
+  }
+
+  .cal-btn {
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 200px;
+    left: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    background-color: #eb5d47;
+  }
+  .benefit-banner {
+    display: none;
+    position: absolute;
+    background-color: red;
+  }
+
+  .benefit-banner {
+    display: none;
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: fit-content;
+    padding: 2%;
+    cursor: pointer;
+    background-color: #a333ff;
+  }
+  
+  .benefit-banner > .benefit-list{
+    list-style-type:circle;
+    padding: 0;
+  }
+  
+  .benefit-list li{
+    margin-bottom: 3%;
+  }
+
+  .bmi-result {
+    display: none;
+    position: absolute;
+    top: 2%;
+    height: 80%;
+    width: 80%;
+    left: 10%;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 2%;
+    color: black;
+    background-color: white;
+  }
 }
